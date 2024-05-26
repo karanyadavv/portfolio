@@ -29,17 +29,17 @@ export default function Intro(){
           />
         </motion.div>
       </div>
-      <motion.p 
+      <motion.h1 
         className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
         <span className="font-bold">Hello, I'm Karan.</span> I'm a{" "}
-        <span className="font-bold">front-end developer</span> with{" "}
+        <span className="font-bold">Front-end developer</span> with{" "}
         <span className="font-bold">1 year</span> of emmersive experience. I enjoy
         building <span className="italic">sites & apps</span>. My focus is revolves around{" "}
         <span className="underline">React (Next.js)</span>.
-      </motion.p>
+      </motion.h1>
       <motion.div 
         className="flex flex-col sm:flex-row items-center justify-center gap-2 px-4 text-lg font-medium"
         initial={{ opacity: 0, y: 100 }}
