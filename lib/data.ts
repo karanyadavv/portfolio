@@ -35,21 +35,22 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Web developer",
-    location: "Vikhroli, Navi mumbai",
-    description:
-      "Managed web content publishing and project coordination across automotive and pharmaceutical sectors using AEM and Workfront, enhancing decision-making and industry knowledge",
-    icon: React.createElement(LuGraduationCap),
-    date: "Mar 2021 - Aug 2022",
-  },
-  {
     title: "Web Specialist",
     location: "Airoli, Navi mumbai",
     description:
       "Spearheaded web development projects with a focus on mobile-first design, SEO, and web accessibility, utilizing AEM and JIRA for optimal project management and execution.",
-    icon: React.createElement(FaReact),
+    icon: React.createElement(CgWorkAlt),
     date: "Sep 2022 - present",
   },
+  {
+    title: "Web developer",
+    location: "Vikhroli, Navi mumbai",
+    description:
+      "Managed web content publishing and project coordination across automotive and pharmaceutical sectors using AEM and Workfront, enhancing decision-making and industry knowledge",
+    icon: React.createElement(CgWorkAlt),
+    date: "Mar 2021 - Aug 2022",
+  },
+  
 ] as const;
 
 export const projectsData = [
