@@ -19,11 +19,10 @@ export default function About() {
     >
       <SectionHeading>About me</SectionHeading>
       <p className="mb-3">
-        After graduating with a degree in{" "}
-        <span className="font-medium">Computer Science</span>, I decided to pursue my
-        passion for programming. I enrolled in a coding bootcamp and learned{" "}
-        <span className="font-medium">full-stack web development</span>.{" "}
-        <span className="italic">My favorite part of programming</span> is the
+        {/* After graduating with a degree in{" "}
+        <span className="font-medium">Computer Science</span>,starting out with a curiosity that quickly grew into a full-fledged passion. My initial foray was into{" "}
+        <span className="font-medium">frontend web development,</span>with React as my primary tool.
+        is the
         problem-solving aspect. I <span className="underline">love</span> the
         feeling of finally figuring out a solution to a problem. My core stack
         is{" "}
@@ -33,16 +32,14 @@ export default function About() {
         . I am also familiar with TypeScript and Prisma. I am always looking to
         learn new technologies. I am currently looking for a{" "}
         <span className="font-medium">full-time position</span> as a software
-        developer.
-      </p>
+        developer. */}
 
+        After graduating with a degree in{" "}
+        <span className="font-medium">Computer Science</span>,starting out with a curiosity that quickly grew into a full-fledged passion. My initial foray was into frontend development, with <span className="font-medium">React</span> as my primary tool. Over time, I crafted a variety of dynamic and engaging applications, steadily refining my skills and deepening my{" "}
+        <span className="underline">love</span> for coding.
+      </p>
       <p>
-        <span className="italic">When I&apos;m not coding</span>, I enjoy playing
-        video games, watching movies, and playing with my dog. I also enjoy{" "}
-        <span className="font-medium">learning new things</span>. I am currently
-        learning about{" "}
-        <span className="font-medium">history and philosophy</span>. I&apos;m also
-        learning how to play the guitar.
+      As my expertise expanded, I transitioned from being a frontend developer to embracing full-stack development, immersing myself in the <span className="font-medium">MERN stack</span>(MongoDB, Express.js, React, Node.js). Nowadays, I predominantly work with <span className="font-medium">Next.js</span>, leveraging its powerful features to build robust and scalable web applications.
       </p>
     </motion.section>
   );
