@@ -5,6 +5,7 @@ import { LuGraduationCap } from "react-icons/lu";
 import lotionImg from "@/public/lotion.png";
 import rpsImg from "@/public/rps.png";
 import todoImg from "@/public/todo.png";
+import quizupImg from "@/public/quiz-up.png";
 
 export const links = [
   {
@@ -60,6 +61,13 @@ export const projectsData = [
       "Lotion is a Notion clone, designed to provide users with a collaborative workspace for note-taking, task management, and document organization.",
     tags: ["React", "Next.js", "Convex", "Edgestore", "BlockNote", "Zustand", "Tailwind", "Shadcn"],
     imageUrl: lotionImg,
+  },
+  {
+    title: "Quiz Web app",
+    description:
+      "A dynamic quiz app styled with Tailwind CSS that fetches questions from the Open Trivia Database, offering a seamless experience for answering and scoring knowledge-based questions.",
+    tags: ["React", "Tailwind"],
+    imageUrl: quizupImg,
   },
   {
     title: "Rock Paper Scissors Game",
