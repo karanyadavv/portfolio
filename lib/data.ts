@@ -1,7 +1,5 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
-import { FaReact } from "react-icons/fa";
-import { LuGraduationCap } from "react-icons/lu";
 import lotionImg from "@/public/lotion.png";
 import rpsImg from "@/public/rps.png";
 import todoImg from "@/public/todo.png";
