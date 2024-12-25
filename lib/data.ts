@@ -59,6 +59,8 @@ export const projectsData = [
       "Lotion is a Notion clone, collaborative workspace for note-taking, and document organization.",
     tags: ["React", "Next.js", "Convex", "Edgestore", "BlockNote", "Zustand", "Tailwind", "Shadcn"],
     imageUrl: lotionImg,
+    liveUrl: "https://lotion-note.vercel.app/",
+    githubUrl: "https://github.com/karanyadavv/lotion",
   },
   {
     title: "Quiz Web app",
@@ -66,6 +68,8 @@ export const projectsData = [
       "A dynamic quiz app styled with Tailwind CSS that fetches questions from the Open Trivia Database.",
     tags: ["React", "Tailwind"],
     imageUrl: quizupImg,
+    liveUrl: "https://quizup-sh.vercel.app/",
+    githubUrl: "https://github.com/karanyadavv/quizup",
   },
   {
     title: "Goal Count down timer",
@@ -73,6 +77,9 @@ export const projectsData = [
       "Users are able to enter their specific goal date and a count down timer runs.",
     tags: ["React JS", "Tailwind"],
     imageUrl: goalImg,
+    liveUrl: "https://goal-count-down.vercel.app/",
+    githubUrl: "https://github.com/karanyadavv/goal-count-down",
+
   },
   {
     title: "Rock Paper Scissors Game",
@@ -80,6 +87,8 @@ export const projectsData = [
       "Play the classic game of Rock, Paper, Scissors right in your browser. Test your luck and strategy against the computer, and track your scores.",
     tags: ["HTML", "CSS", "Vanilla js"],
     imageUrl: rpsImg,
+    liveUrl: "https://rps-self.vercel.app/",
+    githubUrl: "https://github.com/karanyadavv/Rock-paper-scissors",
   },
 ] as const;
 
@@ -94,7 +103,6 @@ export const skillsData = [
   "Git",
   "Github",
   "Tailwind",
-  "Prisma",
   "MongoDB",
   "Prisma ORM",
   "Express",

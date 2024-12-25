@@ -3,7 +3,10 @@
 import { projectsData } from "@/lib/data";
 import { motion,useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import { useRef } from "react";
+import { FaExternalLinkAlt, FaGithub  } from "react-icons/fa";
+
 
 type ProjectProps = (typeof projectsData)[number];
 
@@ -11,7 +14,9 @@ export default function Project({
   title,
   description,
   tags,
-  imageUrl
+  imageUrl,
+  liveUrl,
+  githubUrl,
 }: ProjectProps){
 
   const ref = useRef<HTMLDivElement>(null);
@@ -39,6 +44,14 @@ export default function Project({
         <div className="pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] flex flex-col h-full sm:group-even:ml-[18rem]">
           <h3 className="text-2xl font-semibold">{title}</h3>
           <p className="mt-2 leading-relaxed text-gray-700 dark:text-white/70">{description}</p>
+          <div className="flex space-x-4 my-4">
+            <Link href={liveUrl} target="_blank">
+              <FaExternalLinkAlt />
+            </Link>
+            <Link href={githubUrl} target="_blank">
+              <FaGithub />
+            </Link>
+          </div>
           <ul className="flex flex-wrap mt-4 gap-2 sm:mt-auto">
             {tags.map((tag, index) => (
               <li className="bg-black/[0.7] px-3 py-1 text-[0.7rem] uppercase tracking-wider text-white rounded-full dark:text-white/70" key={index}>
