@@ -43,7 +43,7 @@ export const experiencesData = [
   },
   {
     title: "Web developer",
-    location: "Vikhroli, Navi mumbai",
+    location: "Vikhroli, Mumbai",
     description:
       "Managed web content publishing and project coordination across automotive and pharmaceutical sectors using AEM and Workfront, enhancing decision-making and industry knowledge",
     icon: React.createElement(CgWorkAlt),
