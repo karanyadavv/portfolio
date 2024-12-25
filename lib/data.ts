@@ -2,8 +2,8 @@ import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import lotionImg from "@/public/lotion.png";
 import rpsImg from "@/public/rps.png";
-import todoImg from "@/public/todo.png";
 import quizupImg from "@/public/quiz-up.png";
+import goalImg from "@/public/goal-count-down.png"
 
 export const links = [
   {
@@ -56,16 +56,23 @@ export const projectsData = [
   {
     title: "Note taking app",
     description:
-      "Lotion is a Notion clone, designed to provide users with a collaborative workspace for note-taking, task management, and document organization.",
+      "Lotion is a Notion clone, collaborative workspace for note-taking, and document organization.",
     tags: ["React", "Next.js", "Convex", "Edgestore", "BlockNote", "Zustand", "Tailwind", "Shadcn"],
     imageUrl: lotionImg,
   },
   {
     title: "Quiz Web app",
     description:
-      "A dynamic quiz app styled with Tailwind CSS that fetches questions from the Open Trivia Database, offering a seamless experience for answering and scoring knowledge-based questions.",
+      "A dynamic quiz app styled with Tailwind CSS that fetches questions from the Open Trivia Database.",
     tags: ["React", "Tailwind"],
     imageUrl: quizupImg,
+  },
+  {
+    title: "Goal Count down timer",
+    description:
+      "Users are able to enter their specific goal date and a count down timer runs.",
+    tags: ["React JS", "Tailwind"],
+    imageUrl: goalImg,
   },
   {
     title: "Rock Paper Scissors Game",
@@ -73,13 +80,6 @@ export const projectsData = [
       "Play the classic game of Rock, Paper, Scissors right in your browser. Test your luck and strategy against the computer, and track your scores.",
     tags: ["HTML", "CSS", "Vanilla js"],
     imageUrl: rpsImg,
-  },
-  {
-    title: "Todo App",
-    description:
-      "A simple and responsive Todo app built with HTML, CSS, and JavaScript",
-    tags: ["HTML", "CSS", "Vanilla js"],
-    imageUrl: todoImg,
   },
 ] as const;
 
