@@ -34,10 +34,10 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Web Specialist",
-    location: "Airoli, Navi mumbai",
+    title: "Software Engineer",
+    location: "Kharadi, Pune",
     description:
-      "Spearheaded web development projects with a focus on mobile-first design, SEO, and web accessibility, utilizing AEM and JIRA for optimal project management and execution.",
+      "Spearheaded web development projects leveraging React, Redux, Django, and Postgres, while streamlining deployments with Docker, Kubernetes, Terraform, and GitLab CI/CD for scalable, reliable delivery.",
     icon: React.createElement(CgWorkAlt),
     date: "Sep 2022 - present",
   },
