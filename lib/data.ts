@@ -3,17 +3,17 @@ import { CgWorkAlt } from "react-icons/cg";
 import lotionImg from "@/public/lotion.png";
 import rpsImg from "@/public/rps.png";
 import quizupImg from "@/public/quiz-up.png";
-import goalImg from "@/public/goal-count-down.png"
+import goalImg from "@/public/goal-count-down.png";
 
 export const links = [
   {
     name: "Home",
     hash: "#home",
   },
-  {
-    name: "About",
-    hash: "#about",
-  },
+  // {
+  //   name: "About",
+  //   hash: "#about",
+  // },
   {
     name: "Projects",
     hash: "#projects",
@@ -26,10 +26,10 @@ export const links = [
     name: "Experience",
     hash: "#experience",
   },
-  {
-    name: "Contact",
-    hash: "#contact",
-  },
+  // {
+  //   name: "Contact",
+  //   hash: "#contact",
+  // },
 ] as const;
 
 export const experiencesData = [
@@ -49,7 +49,6 @@ export const experiencesData = [
     icon: React.createElement(CgWorkAlt),
     date: "Mar 2021 - Aug 2022",
   },
-  
 ] as const;
 
 export const projectsData = [
@@ -57,7 +56,16 @@ export const projectsData = [
     title: "Note taking app",
     description:
       "Lotion is a Notion clone, collaborative workspace for note-taking, and document organization.",
-    tags: ["React", "Next.js", "Convex", "Edgestore", "BlockNote", "Zustand", "Tailwind", "Shadcn"],
+    tags: [
+      "React",
+      "Next.js",
+      "Convex",
+      "Edgestore",
+      "BlockNote",
+      "Zustand",
+      "Tailwind",
+      "Shadcn",
+    ],
     imageUrl: lotionImg,
     liveUrl: "https://lotion-note.vercel.app/",
     githubUrl: "https://github.com/karanyadavv/lotion",
@@ -79,7 +87,6 @@ export const projectsData = [
     imageUrl: goalImg,
     liveUrl: "https://goal-count-down.vercel.app/",
     githubUrl: "https://github.com/karanyadavv/goal-count-down",
-
   },
   {
     title: "Rock Paper Scissors Game",
@@ -93,15 +100,14 @@ export const projectsData = [
 ] as const;
 
 export const skillsData = [
-  "HTML",
-  "CSS",
+  "React JS",
   "JavaScript",
   "TypeScript",
-  "React",
   "Next.js",
   "Node.js",
+  "HTML",
+  "CSS",
   "Git",
-  "Github",
   "Tailwind",
   "MongoDB",
   "Prisma ORM",
