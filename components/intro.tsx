@@ -8,6 +8,7 @@ import Link from "next/link";
 import { FaGithubSquare } from "react-icons/fa";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
+import { TextEnterAnimation } from "./text-enter-animation";
 
 export default function Intro() {
   const { ref } = useSectionInView("Home", 0.5);
@@ -46,7 +47,9 @@ export default function Intro() {
         <span className="font-bold">Front-end developer.</span> I enjoy building{" "}
         <span className="italic">sites & apps</span>. My focus revolves around{" "}
         <span className="underline">React (Next.js)</span>.
-        <div className="mt-8 text-lg">📍 Mumbai</div>
+        <div className="mt-8 text-lg">
+          <TextEnterAnimation>📍 Mumbai</TextEnterAnimation>
+        </div>
       </motion.h1>
       <motion.div
         className="flex flex-col items-center justify-center gap-2 px-4 text-lg font-medium sm:flex-row"
