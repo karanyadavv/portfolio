@@ -1,17 +1,28 @@
 import React, { ReactNode } from "react";
+import { motion } from "framer-motion";
 
 type TextEnterAnimationProps = {
-  children: string;
+  text: string;
 };
 
-export const TextEnterAnimation = ({ children }: TextEnterAnimationProps) => {
+export const TextEnterAnimation = ({ text }: TextEnterAnimationProps) => {
   return (
     <>
-      {children.split("").map((char, index) => {
+      {text.split("").map((char, index) => {
         return (
-          <span key={index} className="animation-reveal">
+          <motion.span
+            key={index}
+            className="inline-block"
+            initial={{ y: "100%" }}
+            animate={{ y: "0" }}
+            transition={{
+              ease: [0.19, 1, 0.22, 1],
+              duration: 1.3,
+              delay: 0.03 * index,
+            }}
+          >
             {char}
-          </span>
+          </motion.span>
         );
       })}
     </>
