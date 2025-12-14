@@ -16,7 +16,7 @@ export default function Experience() {
   const { theme } = useTheme();
 
   return (
-    <section id="experience" ref={ref} className="scroll-mt-28 mb-28 sm:mb-40">
+    <section id="experience" ref={ref} className="mb-28 scroll-mt-28 sm:mb-40">
       <SectionHeading>My experience</SectionHeading>
       <VerticalTimeline lineColor="">
         {experiencesData.map((item, index) => (
@@ -45,9 +45,13 @@ export default function Experience() {
                 fontSize: "1.5rem",
               }}
             >
-              <h3 className="font-semibold capitalize">{item.title}</h3>
-              <p className="font-normal !mt-0">{item.location}</p>
-              <p className="!mt-1 !font-normal text-gray-700 dark:text-white/75">
+              <h3 className="font-semibold capitalize dark:text-gray-200">
+                {item.title}
+              </h3>
+              <p className="!mt-0 font-normal text-gray-700 dark:text-gray-400">
+                {item.location}
+              </p>
+              <p className="!mt-1 !text-sm !font-normal text-gray-500 dark:text-gray-500">
                 {item.description}
               </p>
             </VerticalTimelineElement>
