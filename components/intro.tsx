@@ -1,17 +1,19 @@
 "use client";
 
 import Image from "next/image";
-import { BsArrowRight, BsLinkedin } from "react-icons/bs";
+import { BsLinkedin } from "react-icons/bs";
 import { ImAttachment } from "react-icons/im";
 
 import { MdEmail } from "react-icons/md";
-import { HiDownload } from "react-icons/hi";
 import Link from "next/link";
 import { FaGithubSquare } from "react-icons/fa";
+import { useSectionInView } from "@/lib/hooks";
 
 export default function Intro() {
+  const { ref } = useSectionInView("Home", 0.2);
   return (
     <section
+      ref={ref}
       id="home"
       className="mb-20 mt-44 flex w-full flex-col md:mb-52 md:max-w-[50rem] md:items-center"
     >
