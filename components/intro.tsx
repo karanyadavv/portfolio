@@ -15,9 +15,9 @@ export default function Intro() {
     <section
       ref={ref}
       id="home"
-      className="mb-20 mt-44 flex w-full flex-col md:mb-52 md:max-w-[50rem] md:items-center"
+      className="mb-20 mt-44 flex w-full flex-col md:mb-52 md:max-w-[50rem]"
     >
-      <div className="flex items-start">
+      <div>
         <Image
           src="/karan.jpg"
           alt="Karan's portrait"
@@ -27,7 +27,7 @@ export default function Intro() {
           className="h-24 w-24 rounded-full object-cover shadow-xl"
         />
       </div>
-      <div className="md:flex md:w-[80%] md:justify-between">
+      <div className="md:flex md:justify-between">
         <h1 className="mt-4 flex flex-col text-left">
           <span className="text-4xl font-semibold tracking-tight">
             Karan Yadav
