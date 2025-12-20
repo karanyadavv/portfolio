@@ -7,9 +7,17 @@ html {
 }
 
 html.dark {
-  --line-color: rgba(255,255,255,0.2);
+  --line-color: rgba(255, 255, 255, 0.2);
 }
 
-.borderBlack{
+.borderBlack {
   @apply border border-black/10;
+}
+
+:root {
+  --border: 240, 6%, 90%;
+}
+
+.dark {
+  --border: 240, 4%, 16%;
 }
