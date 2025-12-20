@@ -15,9 +15,9 @@ export default function Intro() {
     <section
       ref={ref}
       id="home"
-      className="mb-20 mt-44 flex w-full flex-col md:mb-52 md:max-w-[50rem]"
+      className="border-border mb-20 mt-44 flex w-full flex-col border-y py-6 md:mb-52"
     >
-      <div>
+      <div className="pl-6">
         <Image
           src="/karan.jpg"
           alt="Karan's portrait"
@@ -27,21 +27,23 @@ export default function Intro() {
           className="h-24 w-24 rounded-full object-cover shadow-xl"
         />
       </div>
-      <div className="md:flex md:justify-between">
-        <h1 className="mt-4 flex flex-col text-left">
-          <span className="text-4xl font-semibold tracking-tight">
-            Karan Yadav
-          </span>
-          <span className="text-md text-gray-400">Software Engineer</span>
-          <span className="mt-2 text-sm text-gray-500">📍 Mumbai</span>
-        </h1>
+      <div className="px-6 md:flex md:justify-between">
+        <div className="">
+          <h1 className="mt-4 flex flex-col text-left">
+            <span className="text-2xl font-semibold tracking-tight sm:text-4xl">
+              Karan Yadav
+            </span>
+          </h1>
+          <div className="text-md text-gray-400">Software Engineer</div>
+          <div className="mt-2 text-sm text-gray-500">📍 Mumbai</div>
+        </div>
         <div className="text-md mt-4 flex flex-row items-center justify-start gap-4 font-medium md:flex">
           <Link
             className="hover:opacity-80"
             href="mailto:karanyadav729@gmail.com"
             target="_blank"
           >
-            <MdEmail className="size-7" />
+            <MdEmail className="size-5 md:size-7" />
           </Link>
 
           <Link
@@ -50,7 +52,7 @@ export default function Intro() {
             target="_blank"
             download
           >
-            <ImAttachment className="size-6" />
+            <ImAttachment className="size-4 md:size-6" />
           </Link>
 
           <Link
@@ -58,7 +60,7 @@ export default function Intro() {
             href="https://linkedin.com/in/karankumar-yadav"
             target="_blank"
           >
-            <BsLinkedin className="size-6" />
+            <BsLinkedin className="size-4 md:size-6" />
           </Link>
 
           <Link
@@ -66,7 +68,7 @@ export default function Intro() {
             href="https://github.com/karanyadavv"
             target="_blank"
           >
-            <FaGithubSquare className="size-6" />
+            <FaGithubSquare className="size-4 md:size-6" />
           </Link>
         </div>
       </div>
