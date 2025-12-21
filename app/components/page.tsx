@@ -7,7 +7,7 @@ const Components = () => {
   return (
     <div className="px-6">
       <div className="">
-        <h1 className="text-4xl font-medium">Components</h1>
+        <h1 className="text-4xl font-medium tracking-tight">Components</h1>
         <div className="mt-4 text-sm font-light text-opacity-40">
           A collection of reusable components.
         </div>
