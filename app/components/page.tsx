@@ -24,13 +24,13 @@ const Components = () => {
                 href={`/components/${component.slug}`}
                 className=""
               >
-                <div className="flex flex-col gap-2">
+                <div className="flex flex-col gap-4">
                   <Image
                     width={1024}
                     height={600}
                     alt={component.title}
                     src={component.image}
-                    className="overflow-hidden rounded"
+                    className="overflow-hidden rounded-xl"
                   />
                   <p className="text-xl font-bold text-neutral-700 dark:text-neutral-100">
                     {component.title}
