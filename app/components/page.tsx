@@ -15,7 +15,10 @@ const Components = () => {
       <div className="mt-10">
         {components.map((component, id) => {
           return (
-            <div className="relative z-40 grid grid-cols-1 items-start gap-20 pb-40 pt-0 md:grid-cols-2 md:pt-10 lg:gap-10 xl:grid-cols-2">
+            <div
+              className="relative z-40 grid grid-cols-1 items-start gap-20 pb-40 pt-0 md:grid-cols-2 md:pt-10 lg:gap-10 xl:grid-cols-2"
+              key={id}
+            >
               <Link
                 key={id}
                 href={`/components/${component.slug}`}

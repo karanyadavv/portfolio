@@ -24,8 +24,9 @@ export default function RootLayout({
       <body
         className={`${inter.className} text-gray-750 relative mx-auto max-w-4xl bg-gray-100 pt-28 dark:bg-stone-950 dark:text-zinc-200 dark:text-opacity-90 sm:pt-36`}
       >
-        <div className="border-border absolute left-0 top-0 hidden h-full overflow-hidden border-l [mask-image:linear-gradient(to_bottom,transparent_0%,black_10%,black_80%,transparent_100%)] sm:block" />
-        <div className="border-border absolute right-0 top-0 hidden h-full overflow-hidden border-r [mask-image:linear-gradient(to_bottom,transparent_0%,black_10%,black_80%,transparent_100%)] sm:block" />
+        <div className="absolute left-0 top-0 hidden h-full overflow-hidden border-l border-border [mask-image:linear-gradient(to_bottom,transparent_0%,black_10%,black_80%,transparent_100%)] sm:block" />
+        <div className="absolute right-0 top-0 hidden h-full overflow-hidden border-r border-border [mask-image:linear-gradient(to_bottom,transparent_0%,black_10%,black_80%,transparent_100%)] sm:block" />
+
         <ThemeContextProvider>
           <ActiveSectionContextProvider>
             <Header />

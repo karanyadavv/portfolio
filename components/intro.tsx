@@ -29,10 +29,8 @@ export default function Intro() {
       </div>
       <div className="px-6 md:flex md:justify-between">
         <div className="">
-          <h1 className="mt-4 flex flex-col text-left">
-            <span className="text-2xl font-semibold tracking-tight sm:text-4xl">
-              Karan Yadav
-            </span>
+          <h1 className="mt-4 flex flex-col text-left text-2xl font-semibold tracking-tight sm:text-4xl">
+            Karan Yadav
           </h1>
           <div className="text-md text-gray-400">Software Engineer</div>
           <div className="mt-2 text-sm text-gray-500">📍 Mumbai</div>

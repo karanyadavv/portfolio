@@ -8,23 +8,23 @@ import goalImg from "@/public/goal-count-down.png";
 export const links = [
   {
     name: "Home",
-    hash: "#home",
+    hash: "/",
   },
   {
     name: "Projects",
-    hash: "#projects",
+    hash: "/#projects",
   },
   {
     name: "Skills",
-    hash: "#skills",
+    hash: "/#skills",
   },
   {
     name: "Experience",
-    hash: "#experience",
+    hash: "/#experience",
   },
   {
     name: "Components",
-    hash: "#components",
+    hash: "/components",
   },
 ] as const;
 
