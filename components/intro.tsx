@@ -24,7 +24,7 @@ export default function Intro() {
           width={"192"}
           height={"192"}
           priority={true}
-          className="h-24 w-24 rounded-xl object-cover"
+          className="h-24 w-24 rounded-xl object-cover duration-300 hover:brightness-90"
         />
       </div>
       <div className="px-6 md:flex md:justify-between">
