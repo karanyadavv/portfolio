@@ -6,12 +6,24 @@ import { Toaster } from "react-hot-toast";
 import Footer from "@/components/footer";
 import ThemeSwitch from "@/components/theme-switch";
 import ThemeContextProvider from "@/context/theme-context";
+import { Metadata } from "next";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Karan Yadav",
   description: "Frontend Developer",
+  metadataBase: new URL("https://karanyadav.vercel.app/"),
+
+  twitter: {
+    site: "https://karanyadav.vercel.app/",
+    creator: "@karann_yadavv",
+    title: "Karan Yadav - Frontend Developer",
+    images: ["opengraph-image.jpg"],
+  },
+  openGraph: {
+    images: ["opengraph-image.jpg"],
+  },
 };
 
 export default function RootLayout({
