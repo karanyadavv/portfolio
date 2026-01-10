@@ -15,7 +15,7 @@ export default function Intro() {
     <section
       ref={ref}
       id="home"
-      className="border-border mb-20 mt-44 flex w-full flex-col border-y py-6 md:mb-52"
+      className="mb-20 mt-44 flex w-full flex-col border-y-2 border-dashed border-border py-6 md:mb-52"
     >
       <div className="pl-6">
         <Image
@@ -24,7 +24,7 @@ export default function Intro() {
           width={"192"}
           height={"192"}
           priority={true}
-          className="h-24 w-24 rounded-full object-cover shadow-xl"
+          className="h-24 w-24 rounded-xl object-cover"
         />
       </div>
       <div className="px-6 md:flex md:justify-between">
