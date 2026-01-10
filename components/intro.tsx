@@ -33,7 +33,12 @@ export default function Intro() {
             Karan Yadav
           </h1>
           <div className="text-md text-gray-400">Software Engineer</div>
-          <div className="mt-2 text-sm text-gray-500">📍 Mumbai</div>
+          <div className="mt-2 text-sm text-gray-500">
+            <a href="https://maps.app.goo.gl/jWiXdv9LzqnXRuwj9" target="_blank">
+              📍
+            </a>{" "}
+            Mumbai
+          </div>
         </div>
         <div className="text-md mt-4 flex flex-row items-center justify-start gap-4 font-medium md:flex">
           <Link
