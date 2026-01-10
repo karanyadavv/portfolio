@@ -16,6 +16,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://karanyadav.vercel.app/"),
 
   twitter: {
+    card: "summary_large_image",
     site: "https://karanyadav.vercel.app/",
     creator: "@karann_yadavv",
     title: "Karan Yadav - Frontend Developer",
