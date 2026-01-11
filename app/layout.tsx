@@ -20,10 +20,19 @@ export const metadata: Metadata = {
     site: "https://karanyadav.vercel.app/",
     creator: "@karann_yadavv",
     title: "Karan Yadav - Frontend Developer",
-    images: ["opengraph-image.jpg"],
+    images: ["https://karanyadav.vercel.app/opengraph-image.jpg"],
   },
   openGraph: {
-    images: ["opengraph-image.jpg"],
+    title: "Karan Yadav - Frontend Developer",
+    description: "Frontend Developer",
+    images: [
+      {
+        url: "https://karanyadav.vercel.app/opengraph-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Karan Yadav Portfolio",
+      },
+    ],
   },
 };
 
