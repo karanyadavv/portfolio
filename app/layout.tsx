@@ -17,7 +17,6 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    site: "https://karanyadav.vercel.app/",
     creator: "@karann_yadavv",
     title: "Karan Yadav - Frontend Developer",
     images: ["https://karanyadav.vercel.app/opengraph-image.jpg"],
