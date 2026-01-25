@@ -45,6 +45,7 @@ export default function Intro() {
             className="hover:opacity-80"
             href="mailto:karanyadav729@gmail.com"
             target="_blank"
+            aria-label="Send email"
           >
             <MdEmail className="size-5 md:size-7" />
           </Link>
@@ -54,6 +55,7 @@ export default function Intro() {
             href="https://drive.google.com/file/d/1KVH9EVvEFm_0CzBK1VsBKgqG1O-jLJjb/view?usp=sharing"
             target="_blank"
             download
+            aria-label="Download resume"
           >
             <ImAttachment className="size-4 md:size-6" />
           </Link>
@@ -62,6 +64,7 @@ export default function Intro() {
             className="hover:opacity-80"
             href="https://linkedin.com/in/karankumar-yadav"
             target="_blank"
+            aria-label="View my linkedin profile"
           >
             <BsLinkedin className="size-4 md:size-6" />
           </Link>
@@ -70,6 +73,7 @@ export default function Intro() {
             className="hover:opacity-80"
             href="https://github.com/karanyadavv"
             target="_blank"
+            aria-label="View my github profile"
           >
             <FaGithubSquare className="size-4 md:size-6" />
           </Link>

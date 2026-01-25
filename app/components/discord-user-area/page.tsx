@@ -28,7 +28,7 @@ const DiscordUserArea = () => {
           Discord User Area
         </h1>
         <div className="relative mb-20 h-96 w-full rounded-md border border-border">
-          <div className="text-shadow-md absolute inset-0 flex items-center justify-center rounded-md bg-black/30 text-9xl font-bold text-black/90 dark:bg-white/30 dark:text-white/90">
+          <div className="text-shadow-md absolute inset-0 flex items-center justify-center rounded-md bg-black/30 text-9xl font-bold text-white/90 dark:bg-white/30">
             WIP
           </div>
           <div className="flex h-full items-center justify-center">
