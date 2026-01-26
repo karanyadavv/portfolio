@@ -2,22 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-  --line-color: #e5e7eb;
-}
-
-html.dark {
-  --line-color: rgba(255, 255, 255, 0.2);
-}
-
-.borderBlack {
-  @apply border border-black/10;
-}
-
 :root {
   --border: 240 6% 80%;
+  --selection-bg: oklch(87.2% 0.01 258.338);
+  --line-color: #e5e7eb;
 }
 
 .dark {
   --border: 240, 4%, 16%;
+  --selection-bg: oklch(26.9% 0 0);
+  --line-color: rgba(255, 255, 255, 0.2);
+}
+
+@layer base {
+  ::selection {
+    background-color: var(--selection-bg);
+  }
 }

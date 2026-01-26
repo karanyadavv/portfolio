@@ -29,10 +29,12 @@ export default function Intro() {
       </div>
       <div className="px-6 md:flex md:justify-between">
         <div className="">
-          <h1 className="mt-4 flex flex-col text-left text-2xl font-semibold tracking-tight sm:text-4xl">
+          <h1 className="mt-4 flex flex-col text-balance text-left text-xl font-semibold leading-[1.2] tracking-tight sm:text-3xl">
             Karan Yadav
           </h1>
-          <div className="text-md text-gray-400">Software Engineer</div>
+          <div className="text-pretty text-base font-medium leading-relaxed text-gray-500">
+            Software Engineer
+          </div>
           <div className="mt-2 text-sm text-gray-500">
             <a href="https://maps.app.goo.gl/jWiXdv9LzqnXRuwj9" target="_blank">
               📍
