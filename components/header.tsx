@@ -11,8 +11,8 @@ export default function Header() {
 
   return (
     <header className="z-10">
-      <nav className="pointer-events-auto fixed left-1/2 top-8 z-[999] flex -translate-x-1/2 items-center justify-between rounded-lg border border-neutral-200 bg-white/70 p-1 shadow-md backdrop-blur-md dark:border-neutral-800 dark:bg-black/70 sm:top-4">
-        <ul className="flex items-center justify-center gap-y-1 text-sm font-medium text-gray-500 sm:flex-nowrap sm:gap-5">
+      <nav className="pointer-events-auto fixed left-1/2 top-4 z-[999] flex -translate-x-1/2 items-center justify-between rounded-lg border border-neutral-200 bg-white/70 p-1 shadow-md backdrop-blur-md dark:border-neutral-800 dark:bg-black/70 sm:top-4">
+        <ul className="flex items-center justify-center gap-y-1 text-xs font-medium text-gray-500 sm:flex-nowrap sm:gap-5 sm:text-sm">
           {links.map((link) => (
             <motion.li
               className="relative flex items-center justify-center"
