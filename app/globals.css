@@ -19,3 +19,14 @@
     background-color: var(--selection-bg);
   }
 }
+
+@layer utilities {
+  /* hide scrollbar but keep scroll */
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}

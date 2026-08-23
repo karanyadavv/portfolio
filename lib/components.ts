@@ -1,5 +1,7 @@
 import Dummy from "../public/dummy.webp";
 
+// deprecated — now markdown-driven via lib/components.server.ts + content/components/*.mdx
+// kept for backwards compat / reference.
 export const components = [
   {
     id: 1,
