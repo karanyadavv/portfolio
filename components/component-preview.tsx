@@ -107,39 +107,39 @@ function CodeBlock({
 }) {
   if (!code) {
     return (
-      <div className="relative max-h-[480px] overflow-hidden rounded-lg bg-zinc-950">
-        <pre className="no-scrollbar max-h-[480px] overflow-auto p-4 text-sm leading-relaxed text-zinc-100">
+      <div className="relative max-h-[480px] overflow-hidden rounded-lg border border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-950">
+        <pre className="no-scrollbar max-h-[480px] overflow-auto p-4 text-sm leading-relaxed text-zinc-800 dark:text-zinc-100">
           <code className="whitespace-pre">{"// No code found"}</code>
         </pre>
-        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-8 bg-gradient-to-t from-zinc-950 to-transparent" />
-        <div className="pointer-events-none absolute inset-y-0 right-0 w-8 bg-gradient-to-l from-zinc-950 to-transparent" />
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-8 bg-gradient-to-t from-white to-transparent dark:from-zinc-950" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-8 bg-gradient-to-l from-white to-transparent dark:from-zinc-950" />
       </div>
     );
   }
 
   if (highlightedHtml) {
     return (
-      <div className="relative max-h-[480px] overflow-hidden rounded-lg bg-zinc-950">
+      <div className="relative max-h-[480px] overflow-hidden rounded-lg border border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-950">
         <div
           className="no-scrollbar max-h-[480px] overflow-auto p-4 text-sm leading-relaxed [&_pre]:!m-0 [&_pre]:!bg-transparent [&_pre]:p-0 [&_pre]:text-sm [&_pre]:leading-relaxed [&_code]:block"
           dangerouslySetInnerHTML={{ __html: highlightedHtml }}
         />
-        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-10 bg-gradient-to-t from-zinc-950 via-zinc-950/70 to-transparent" />
-        <div className="pointer-events-none absolute inset-y-0 right-0 w-10 bg-gradient-to-l from-zinc-950 via-zinc-950/70 to-transparent" />
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-10 bg-gradient-to-t from-white via-white/70 to-transparent dark:from-zinc-950 dark:via-zinc-950/70" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-10 bg-gradient-to-l from-white via-white/70 to-transparent dark:from-zinc-950 dark:via-zinc-950/70" />
         {/* corner to avoid hard cut where gradients meet */}
-        <div className="pointer-events-none absolute bottom-0 right-0 h-10 w-10 bg-gradient-to-tl from-zinc-950 to-transparent" />
+        <div className="pointer-events-none absolute bottom-0 right-0 h-10 w-10 bg-gradient-to-tl from-white to-transparent dark:from-zinc-950" />
       </div>
     );
   }
 
   // Fallback: plain text (e.g. during dev if highlighting fails)
   return (
-    <div className="relative max-h-[480px] overflow-hidden rounded-lg bg-zinc-950">
-      <pre className="no-scrollbar max-h-[480px] overflow-auto p-4 text-sm leading-relaxed text-zinc-100">
+    <div className="relative max-h-[480px] overflow-hidden rounded-lg border border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-950">
+      <pre className="no-scrollbar max-h-[480px] overflow-auto p-4 text-sm leading-relaxed text-zinc-800 dark:text-zinc-100">
         <code className="whitespace-pre">{code}</code>
       </pre>
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-8 bg-gradient-to-t from-zinc-950 to-transparent" />
-      <div className="pointer-events-none absolute inset-y-0 right-0 w-8 bg-gradient-to-l from-zinc-950 to-transparent" />
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-8 bg-gradient-to-t from-white to-transparent dark:from-zinc-950" />
+      <div className="pointer-events-none absolute inset-y-0 right-0 w-8 bg-gradient-to-l from-white to-transparent dark:from-zinc-950" />
     </div>
   );
 }

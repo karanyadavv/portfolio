@@ -30,3 +30,9 @@
     display: none;
   }
 }
+
+/* Shiki dual theme: light uses inline colors, dark overrides via CSS variables.
+   Pre is transparent (!bg-transparent) so wrapper bg drives the panel; only span colors need swapping. */
+html.dark .shiki span {
+  color: var(--shiki-dark) !important;
+}

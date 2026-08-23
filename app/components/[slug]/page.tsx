@@ -40,7 +40,10 @@ export default async function ComponentDetailPage({
   const highlightedHtml = comp.code
     ? await codeToHtml(comp.code, {
         lang: "tsx",
-        theme: "github-dark",
+        themes: {
+          light: "github-light",
+          dark: "github-dark",
+        },
       })
     : "";
 
