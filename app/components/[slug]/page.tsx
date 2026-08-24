@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { IoArrowBack } from "react-icons/io5";
+import { FiLink } from "react-icons/fi";
 import { codeToHtml } from "shiki";
 import { getAllSlugs, getComponent } from "@/lib/components.server";
 import { ComponentPreview } from "@/components/component-preview";
@@ -86,6 +87,29 @@ export default async function ComponentDetailPage({
           }
         />
       </div>
+
+      {comp.credits.length > 0 && (
+        <div className="mt-8">
+          <h2 className="flex items-center gap-1.5 text-[15px] font-semibold tracking-tight text-zinc-800 dark:text-zinc-200">
+            Inspiration{" "}
+            <FiLink size={14} className="text-zinc-400" aria-hidden />
+          </h2>
+          <ul className="mt-2 list-disc pl-5 marker:text-zinc-300 dark:marker:text-zinc-600">
+            {comp.credits.map((c) => (
+              <li key={c.url} className="text-sm">
+                <a
+                  href={c.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-zinc-600 underline decoration-zinc-300 underline-offset-4 hover:text-zinc-900 hover:decoration-zinc-600 dark:text-zinc-400 dark:decoration-zinc-600 dark:hover:text-zinc-200 dark:hover:decoration-zinc-300"
+                >
+                  {c.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
     </div>
   );
 }
