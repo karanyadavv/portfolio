@@ -5,7 +5,9 @@ import { FiLink } from "react-icons/fi";
 import { codeToHtml } from "shiki";
 import { getAllSlugs, getComponent } from "@/lib/components.server";
 import { ComponentPreview } from "@/components/component-preview";
-import { DiscordUserArea } from "@/registry/components/discord-user-area";
+import { ElevenLabsButton } from "@/registry/components/elevenlabs-button";
+import { TryProvenButton } from "@/registry/components/try-proven-button";
+import { LogTaskCheckbox } from "@/registry/components/log-task-checkbox";
 
 export function generateStaticParams() {
   return getAllSlugs()
@@ -23,7 +25,13 @@ const previewMap: Record<
   string,
   React.ComponentType<{ replayKey?: number }>
 > = {
-  "discord-user-area": DiscordUserArea as unknown as React.ComponentType<{
+  "elevenlabs-button": ElevenLabsButton as unknown as React.ComponentType<{
+    replayKey?: number;
+  }>,
+  "try-proven-button": TryProvenButton as unknown as React.ComponentType<{
+    replayKey?: number;
+  }>,
+  "log-task-checkbox": LogTaskCheckbox as unknown as React.ComponentType<{
     replayKey?: number;
   }>,
 };
