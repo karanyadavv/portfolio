@@ -1,24 +1,70 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
+const TOUCH_HOLD_MS = 1200;
+
 export function ElevenLabsButton() {
-  const [hovered, setHovered] = useState(false);
+  const [expanded, setExpanded] = useState(false);
+  const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const clearTimer = () => {
+    if (timer.current) {
+      clearTimeout(timer.current);
+      timer.current = null;
+    }
+  };
+
+  useEffect(() => clearTimer, []);
+
+  const handlePointerEnter = (event: React.PointerEvent) => {
+    if (event.pointerType === "touch") return;
+    clearTimer();
+    setExpanded(true);
+  };
+
+  const handlePointerLeave = (event: React.PointerEvent) => {
+    if (event.pointerType === "touch") return;
+    clearTimer();
+    setExpanded(false);
+  };
+
+  const handlePointerDown = (event: React.PointerEvent) => {
+    if (event.pointerType === "mouse") return;
+    clearTimer();
+    setExpanded(true);
+  };
+
+  const handlePointerUp = (event: React.PointerEvent) => {
+    if (event.pointerType === "mouse") return;
+    clearTimer();
+    timer.current = setTimeout(() => setExpanded(false), TOUCH_HOLD_MS);
+  };
+
+  const handlePointerCancel = (event: React.PointerEvent) => {
+    if (event.pointerType === "mouse") return;
+    clearTimer();
+    setExpanded(false);
+  };
+
   return (
     <div>
       <motion.button
-        onHoverStart={() => setHovered(true)}
-        onHoverEnd={() => setHovered(false)}
+        onPointerEnter={handlePointerEnter}
+        onPointerLeave={handlePointerLeave}
+        onPointerDown={handlePointerDown}
+        onPointerUp={handlePointerUp}
+        onPointerCancel={handlePointerCancel}
         initial={{ width: 48 }}
-        animate={{ width: hovered ? 160 : 48 }}
+        animate={{ width: expanded ? 160 : 48 }}
         transition={{ duration: 0.3, ease: "easeInOut" }}
-        className="flex cursor-pointer items-center gap-2 rounded-[68px] bg-white px-2 py-2"
+        className="flex cursor-pointer touch-manipulation select-none items-center gap-2 rounded-[68px] bg-white px-2 py-2"
       >
         <div className="flex-shrink-0">
           <WaveFormSVG />
         </div>
         <AnimatePresence>
-          {hovered && (
+          {expanded && (
             <motion.div
               initial={{ width: 0 }}
               animate={{ width: "auto" }}
