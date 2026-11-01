@@ -1,4 +1,5 @@
 import Header from "@/components/header";
+import ScrollToTop from "@/components/scroll-to-top";
 import ThemeSwitch from "@/components/theme-switch";
 import ActiveSectionContextProvider from "@/context/active-section-context";
 import ThemeContextProvider from "@/context/theme-context";
@@ -50,6 +51,7 @@ export default function RootLayout({
         <ThemeContextProvider>
           <ActiveSectionContextProvider>
             <Header />
+            <ScrollToTop />
             {children}
             <Toaster position="top-right" />
             <ThemeSwitch />
