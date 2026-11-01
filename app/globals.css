@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  /* Reserve the scrollbar gutter on both sides so the viewport width (and
+     anything centered against it, e.g. the fixed nav) never shifts when a
+     scrollbar appears or disappears during route changes */
+  scrollbar-gutter: stable both-edges;
+}
+
 :root {
   --border: 240 6% 80%;
   --selection-bg: oklch(87.2% 0.01 258.338);
