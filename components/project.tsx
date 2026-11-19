@@ -6,6 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRef } from "react";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
+import posthog from "posthog-js";
 
 type ProjectProps = (typeof projectsData)[number];
 
@@ -26,6 +27,18 @@ export default function Project({
   const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
   const opacityProgess = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
 
+  const captureProjectLinkClick = (destination: "live_demo" | "source_code") => {
+    if (
+      process.env.NEXT_PUBLIC_POSTHOG_PROJECT_TOKEN &&
+      process.env.NEXT_PUBLIC_POSTHOG_HOST
+    ) {
+      posthog.capture("project_link_clicked", {
+        project_title: title,
+        destination,
+      });
+    }
+  };
+
   return (
     <motion.div
       ref={ref}
@@ -42,10 +55,18 @@ export default function Project({
             {description}
           </p>
           <div className="my-4 flex space-x-4">
-            <Link href={liveUrl} target="_blank">
+            <Link
+              href={liveUrl}
+              target="_blank"
+              onClick={() => captureProjectLinkClick("live_demo")}
+            >
               <FaExternalLinkAlt />
             </Link>
-            <Link href={githubUrl} target="_blank">
+            <Link
+              href={githubUrl}
+              target="_blank"
+              onClick={() => captureProjectLinkClick("source_code")}
+            >
               <FaGithub />
             </Link>
           </div>

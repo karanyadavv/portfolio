@@ -8,9 +8,21 @@ import { MdEmail } from "react-icons/md";
 import Link from "next/link";
 import { FaGithubSquare } from "react-icons/fa";
 import { useSectionInView } from "@/lib/hooks";
+import posthog from "posthog-js";
 
 export default function Intro() {
   const { ref } = useSectionInView("Home", 0.2);
+
+  const captureContactLinkClick = (
+    contactMethod: "email" | "resume" | "linkedin" | "github",
+  ) => {
+    if (
+      process.env.NEXT_PUBLIC_POSTHOG_PROJECT_TOKEN &&
+      process.env.NEXT_PUBLIC_POSTHOG_HOST
+    ) {
+      posthog.capture("contact_link_clicked", { contact_method: contactMethod });
+    }
+  };
   return (
     <section
       ref={ref}
@@ -48,6 +60,7 @@ export default function Intro() {
             href="mailto:karanyadav729@gmail.com"
             target="_blank"
             aria-label="Send email"
+            onClick={() => captureContactLinkClick("email")}
           >
             <MdEmail className="size-5 md:size-7" />
           </Link>
@@ -58,6 +71,7 @@ export default function Intro() {
             target="_blank"
             download
             aria-label="Download resume"
+            onClick={() => captureContactLinkClick("resume")}
           >
             <ImAttachment className="size-4 md:size-6" />
           </Link>
@@ -67,6 +81,7 @@ export default function Intro() {
             href="https://linkedin.com/in/karankumar-yadav"
             target="_blank"
             aria-label="View my linkedin profile"
+            onClick={() => captureContactLinkClick("linkedin")}
           >
             <BsLinkedin className="size-4 md:size-6" />
           </Link>
@@ -76,6 +91,7 @@ export default function Intro() {
             href="https://github.com/karanyadavv"
             target="_blank"
             aria-label="View my github profile"
+            onClick={() => captureContactLinkClick("github")}
           >
             <FaGithubSquare className="size-4 md:size-6" />
           </Link>
